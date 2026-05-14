@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      (function () {
+        try {
+          var k = "tech-sparrow-theme";
+          var t = localStorage.getItem(k);
+          document.documentElement.setAttribute("data-theme", t === "light" || t === "dark" ? t : "dark");
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Tech Sparrow — Think. Build. Evolve. Open source apps, tools, and technology on GitHub."
+    />
+    <title>Tech Sparrow · GitHub organisation</title>
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/105526864?v=4" />
+    <link rel="apple-touch-icon" href="https://avatars.githubusercontent.com/u/105526864?v=4" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <div class="site-header__brand-col">
+          <a class="brand" href="https://github.com/Tech-Sparrow" target="_blank" rel="noopener noreferrer">
+            <img
+              id="brand-avatar"
+              class="brand__avatar"
+              src="https://avatars.githubusercontent.com/u/105526864?v=4"
+              width="36"
+              height="36"
+              alt=""
+              decoding="async"
+              fetchpriority="high"
+            />
+            <span class="brand__text-block">
+              <span class="brand__text">Tech Sparrow</span>
+              <span class="brand__tagline">Think. Build. Evolve.</span>
+            </span>
+          </a>
+        </div>
+        <div class="site-header__end">
+          <nav class="nav" aria-label="Primary">
+            <a href="#about">About</a>
+            <a href="#repos">Repositories</a>
+            <a href="#connect">Connect</a>
+          </nav>
+          <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false">
+            <span class="theme-toggle__track" aria-hidden="true">
+              <span class="theme-toggle__thumb" aria-hidden="true"></span>
+            </span>
+            <span class="theme-toggle__label">Light theme</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__glow" aria-hidden="true"></div>
+        <div class="hero__content">
+          <p class="eyebrow">GitHub organisation</p>
+          <h1 id="hero-title" class="hero__title">Hi, we’re <em>Tech Sparrow</em></h1>
+          <p class="hero__lead">
+            We at Tech Sparrow solve your problems using technology — with small, focused apps, practical tools, and
+            writing that respects your time. Everything here is built to be clear, fast, and a little delightful.
+          </p>
+          <ul class="hero__chips" id="org-stats" aria-live="polite">
+            <li class="chip chip--muted">Loading organisation…</li>
+          </ul>
+          <div class="hero__actions">
+            <a
+              class="btn btn--primary"
+              href="https://github.com/Tech-Sparrow"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View on GitHub</a
+            >
+            <a class="btn btn--ghost" href="#repos">Browse repositories</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section section--tight">
+        <div class="section__inner prose">
+          <h2>About</h2>
+          <p>
+            Tech Sparrow is the home for experiments that graduate into real products: mobile and web apps, browser
+            extensions, Flutter packages, and utilities you can fork or ship as-is. We care about maintainable
+            architecture, honest documentation, and interfaces that stay out of your way.
+          </p>
+          <p>
+            Whether you need a sharper developer workflow, a calmer end-user experience, or a reference implementation
+            you can learn from, we lean on modern stacks and ship in the open so the community can benefit.
+          </p>
+        </div>
+      </section>
+
+      <section id="repos" class="section">
+        <div class="section__inner">
+          <div class="section__head">
+            <h2>Repositories</h2>
+            <p class="section__sub">
+              Pulled live from the
+              <a href="https://api.github.com/orgs/Tech-Sparrow/repos" target="_blank" rel="noopener noreferrer"
+                >public GitHub API</a
+              >
+              (same data you see on the org profile; the private
+              <a href="https://github.com/orgs/Tech-Sparrow/dashboard" target="_blank" rel="noopener noreferrer"
+                >organisation dashboard</a
+              >
+              still requires your GitHub login).
+            </p>
+          </div>
+          <p class="repo-hint" id="repo-status" aria-live="polite">Loading repositories…</p>
+          <ul class="repo-grid" id="repo-list"></ul>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="section__inner prose">
+          <h2>What we ship</h2>
+          <ul class="pillars">
+            <li><strong>New apps</strong> — opinionated products that solve one job exceptionally well.</li>
+            <li><strong>Tech &amp; tooling</strong> — libraries, templates, and scripts you can reuse in your own work.</li>
+            <li><strong>Blogs &amp; notes</strong> — deeper dives on architecture, performance, and craft (linked from repo READMEs).</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="connect" class="section section--footer-cta">
+        <div class="section__inner connect">
+          <div class="connect__intro">
+            <h2>Connect</h2>
+            <p class="connect__lede">
+              Whether you want to explore code, read longer-form context, or collaborate on the next experiment, start
+              here. Tech Sparrow is the public home for side projects that value clarity, craft, and useful defaults.
+            </p>
+          </div>
+          <div class="connect-grid">
+            <article class="connect-card">
+              <span class="connect-card__badge" aria-hidden="true">GitHub</span>
+              <h3 class="connect-card__title">Organisation</h3>
+              <p class="connect-card__text">
+                Every public repository, release, and README lives under the Tech-Sparrow org. Star what you depend on,
+                fork to adapt it, or open an issue when you spot a bug or have a feature in mind — we read and triage in
+                the open.
+              </p>
+              <a
+                class="connect-card__cta"
+                href="https://github.com/Tech-Sparrow"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open Tech-Sparrow on GitHub</a
+              >
+            </article>
+            <article class="connect-card">
+              <span class="connect-card__badge" aria-hidden="true">Portfolio</span>
+              <h3 class="connect-card__title">Founder · Ravi Kumar Sharma</h3>
+              <p class="connect-card__text">
+                The portfolio ties together professional Android and AOSP work with Flutter packages, Chrome extensions,
+                and writing on Medium. It is the best place to understand how Tech Sparrow fits into a broader open
+                source practice.
+              </p>
+              <a
+                class="connect-card__cta"
+                href="https://sharmark9931.github.io/sharmark9931/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Visit sharmark9931.github.io</a
+              >
+            </article>
+            <article class="connect-card">
+              <span class="connect-card__badge" aria-hidden="true">Profile</span>
+              <h3 class="connect-card__title">Maintainer · @sharmark9931</h3>
+              <p class="connect-card__text">
+                Personal GitHub profile for day-to-day commits, package releases on pub.dev, extension updates, and
+                cross-linking into org repos. Follow for activity across Tech Sparrow and individual experiments.
+              </p>
+              <a
+                class="connect-card__cta"
+                href="https://github.com/sharmark9931"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View @sharmark9931</a
+              >
+            </article>
+            <!-- Optional: set data-visit-page-id="your-stable-key" on this article to pin one counter across previews. -->
+            <article class="connect-card connect-card--stat">
+              <span class="connect-card__badge" aria-hidden="true">Live</span>
+              <h3 class="connect-card__title" id="visit-title">Site visits</h3>
+              <p class="connect-card__stat" id="visit-count" aria-labelledby="visit-title" aria-live="polite">…</p>
+              <p class="connect-card__hint" id="visit-hint">
+                Total page loads recorded for this site via a lightweight public counter (not unique visitors). Works on
+                static GitHub Pages; ad blockers or offline use may hide the number.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>© <span id="year"></span> Tech Sparrow. Built for GitHub Pages.</p>
+        <p class="site-footer__note">
+          Data from <code>api.github.com</code>; design language aligned with
+          <a href="https://sharmark9931.github.io/sharmark9931/" target="_blank" rel="noopener noreferrer"
+            >sharmark9931.github.io</a
+          >.
+        </p>
+      </div>
+    </footer>
+
+    <script src="assets/app.js" defer></script>
+  </body>
+</html>
